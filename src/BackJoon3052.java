@@ -41,3 +41,5 @@ public class BackJoon3052 {
 
     }
 }
+
+//3052번 에서 HashSet과 LinkedHashSet의 개념을 공부 해볼 수 있다!
