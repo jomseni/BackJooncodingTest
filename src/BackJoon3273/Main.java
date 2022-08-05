@@ -27,6 +27,7 @@ public class Main {
         st = new StringTokenizer(bf.readLine(), " ");
 
         for (int i = 0; i < arrays.length; i++) {
+            //공백을 기준으로 숫자 입력하는것을 저장한다 배열의 형태로! ex) 2 45 ...
             arrays[i] = Integer.parseInt(st.nextToken());
         }
 
