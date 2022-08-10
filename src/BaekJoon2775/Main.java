@@ -36,10 +36,10 @@ public class Main {
     //계산하는 메서드 생성
     public static void cel() {
 
-        //1층 출력
+
         for (int i = 0; i < 15; i++) {
 
-            number[i][1] = 1;
+            number[1][1] = 1;
             number[0][i] = i;
         }
 
