@@ -35,6 +35,6 @@ public class Main {
         }
         // 모두 다를 경우!
         else
-            System.out.println((Math.max(a,Math.max(b,c))));
+            System.out.println( Math.max(a,Math.max(b,c)) * 100);
     }
 }
