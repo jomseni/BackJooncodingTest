@@ -15,6 +15,7 @@ public class Main {
 
         int[] mine = new int[6];
 
+
         StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
         for(int i = 0; i < 6; i++){
