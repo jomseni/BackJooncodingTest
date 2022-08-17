@@ -18,7 +18,9 @@ public class Main {
         int input = Integer.parseInt(st.nextToken());
         int input2 = Integer.parseInt(st.nextToken());
 
-        int[] score = new int[input];
+
+        //내림 차순으로 구할때는 int[] 가 아닌 Intger[]  = new Integer를 사용해야한다.
+        Integer[] score = new Integer[input];
 
 
         //개행 후 입력값 받는거 다시 st 초기화 해줘야함!!!!!
@@ -28,8 +30,10 @@ public class Main {
             score[i] = Integer.parseInt(st.nextToken());
         }
 
-        Arrays.sort(score);
-        System.out.println(score[input-input2]);
+
+        //내림차순을 사용할 때 Collections.reverseOrder() 사용한다!
+        Arrays.sort(score, Collections.reverseOrder());
+        System.out.println(score[input2-1]);
 
     }
 }
