@@ -48,12 +48,12 @@ public class Main {
             return -1;
         }
 
-        //
+        //두 원의 중심사이거리가 반지름의 길이의 합보다 클 때
         else if(distance_center > (int)Math.pow(r2 + r1,2)) {
             return 0;
         }
 
-
+        //원이 안에 있는데 겹치지 않을 때
         else if(distance_center < (int)Math.pow(r1 - r2,2)){
             return 0;
         }
