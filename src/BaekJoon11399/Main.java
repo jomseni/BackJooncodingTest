@@ -26,12 +26,11 @@ public class Main {
         Arrays.sort(time);
 
         int time_hap = 0;
-        int tmp = 0;
+
         for(int i=0; i < N; i++){
             time_hap += time[i];
-            tmp += time_hap;
         }
-        sb.append(tmp);
+        sb.append(time_hap);
         System.out.println(sb);
     }
 }
