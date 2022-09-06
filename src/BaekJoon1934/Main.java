@@ -6,27 +6,53 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Main {
+
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 
-
+        //연속적인 출력값 받기위해서 StringBuilder를 사요한다
         StringBuilder sb = new StringBuilder();
+        //테스트 케이스 수 입력값 받기
+        int t = Integer.parseInt(br.readLine());
 
-        //숫자 쌍 받을 수를  키보드 값 입력받는다
-        int input = Integer.parseInt(br.readLine());
+        StringTokenizer st;
 
-        //두 숫자 받을 입력값을 배열로 받기 위해 배열 생성
-        int[] array = new int[2];
-        for(int i=0; i < input; i++){
-            //한줄의 공백 기준으로 토큰 나누기
-            StringTokenizer st = new StringTokenizer(br.readLine()," ");
-            array[i] = Integer.parseInt(st.nextToken());
 
+        //테스트케이스 갯수만큼의 수를 입력받는다.
+        for(int i=0; i < t; i++){
+            st = new StringTokenizer(br.readLine());
+
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+
+            int result = lcm(a,b);
+            sb.append(result).append('\n');
         }
+        System.out.println(sb);
 
 
+    }
+
+    //최대공약수 구하기!
+    private static int GCD(int a, int b) {
+        if(a < b) { //유클리드 호제법 조건
+                int temp = a;
+                a = b;
+                b = temp;
+        }
+        while(b != 0){
+            int r = a % b;
+            a = b;
+            b = r;
+        }
+        return a;
+    }
+
+    //최소공배수 구하는 방법!
+    static int lcm(int a, int b) {
+        return (a * b) / GCD(a,b);
     }
 
 }
